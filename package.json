@@ -1,0 +1,30 @@
+{
+  "name": "egads",
+  "version": "1.0.0",
+  "description": "Yet another extensible error library for node.js",
+  "main": "egads.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stolksdorf/egads.git"
+  },
+  "keywords": [
+    "error",
+    "api",
+    "rest",
+    "http",
+    "express",
+    "extend",
+    "err",
+    "extensible",
+    "extendable"
+  ],
+  "author": "stolksdorf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stolksdorf/egads/issues"
+  },
+  "homepage": "https://github.com/stolksdorf/egads#readme"
+}
