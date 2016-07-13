@@ -1,6 +1,8 @@
 # egads
 Yet another extensible error library for node.js
 
+*Extensible, Generic, Agnostic, Descriptive, Simple*
+
 ### Why this library?
 There are tons of [alterntive libraries out there](https://www.npmjs.com/search?q=extend+error), however they didn't meet the feature set I wanted:
 
