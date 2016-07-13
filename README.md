@@ -15,6 +15,9 @@ There are tons of [alterntive libraries out there](https://www.npmjs.com/search?
 
 ### How To Use
 
+Install `npm install egads`
+
+
 Define your errors.
 ```
 //define your base error
