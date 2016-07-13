@@ -2,11 +2,11 @@
 Yet another extensible error library for node.js
 
 ### Why this library?
-There are tons of [alterntive libraries out there](https://www.npmjs.com/search?q=extend+error), here's my feature set.
+There are tons of [alterntive libraries out there](https://www.npmjs.com/search?q=extend+error), however they didn't meet the feature set I wanted:
 
 - Super tiny (under 40 lines!)
 - Doesn't pollute global scope or mutate existing types
-- Configurable and overwritable name, message, statusCode, and custom fields
+- Configurable and overwritable name, message, status, and custom fields
 - Deep nesting. Each extended error can further extend
 - Each error is an `instanceOf` all of it's parents, including the native `Error` type
 - Don't _have_ to use the `new` keyword when throwing
@@ -15,6 +15,7 @@ There are tons of [alterntive libraries out there](https://www.npmjs.com/search?
 
 ### How To Use
 
+Define your errors.
 ```
 //define your base error
 var Err = require('egads').extend('Something done goofd', 500, 'GenericError');
@@ -33,8 +34,10 @@ Err.badInput = Err.extend({
         shameOnYou : true
     }
 })
+```
 
-//Throw it!
+Throw'em
+```
 try{
     throw new Err.auth.badToken();
 }catch(err){
@@ -62,7 +65,7 @@ try{
 }catch(err){
     err instanceof Err.auth;     //true!
     err.fields.type;             // 'Earl Grey'
-​   err.status;                  //418
+​    err.status;                  //418
     console.log(err.toString()); // 'TeapotError : Entity body may be short and/or stout'
 }
 ```
