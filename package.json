@@ -1,6 +1,6 @@
 {
   "name": "egads",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet another extensible error library for node.js",
   "main": "egads.js",
   "scripts": {
