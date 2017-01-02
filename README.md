@@ -98,7 +98,7 @@ app.get('/:coolGuy', (req, res) => {
 
 //Express Error Handler
 app.use((err, req, res, next) => {
-    if(err instanceOf ApiError){
+    if(err instanceof ApiError){
         return res.status(err.status).send({
             type : err.name,
             message : err.message
