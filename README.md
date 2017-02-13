@@ -21,7 +21,7 @@ Install `npm install egads`
 
 
 Define your errors.
-```
+```javascript
 //define your base error
 var Err = require('egads').extend('Something done goofd', 500, 'GenericError');
 
@@ -42,7 +42,7 @@ Err.badInput = Err.extend({
 ```
 
 Throw'em
-```
+```javascript
 try{
     throw new Err.auth.badToken();
 }catch(err){
@@ -82,7 +82,7 @@ try{
 
 If you using [express](https://expressjs.com/) you can write a simple error handler for `egads` errors.
 
-```
+```javascript
 var app = require('express')();
 var ApiError = require('egads');
 
