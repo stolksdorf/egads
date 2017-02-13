@@ -99,12 +99,13 @@ app.get('/:coolGuy', (req, res) => {
 //Express Error Handler
 app.use((err, req, res, next) => {
     if(err instanceof ApiError){
+        //Since this is an API Error, we know it will have a status, name, and message
         return res.status(err.status).send({
             type : err.name,
             message : err.message
         });
     }
-    //If server error, print the whole stack for debugging
+    //If a generic error, print the whole stack for debugging
     return res.status(500).send({
         message : err.message,
         stack : err.stack
