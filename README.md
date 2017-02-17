@@ -41,6 +41,8 @@ Err.badInput = Err.extend({
         shameOnYou : true
     }
 })
+
+module.exports = Err;
 ```
 
 Throw'em
