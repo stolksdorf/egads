@@ -51,12 +51,15 @@ try{
     throw new Err.auth.badToken();
 }catch(err){
     err instanceof Error;             //true
-    err instanceof Err.auth.badToken; //true
-    err instanceof Err.auth;          //true!!!
-​
-    err.status; //401
-    console.log(err.stack); //works
-    console.log(err.toString()); // 'AuthError : Bad Auth Token'
+    err instanceof Err;               //true!
+    err instanceof Err.auth;          //true!!
+    err instanceof Err.auth.badToken; //true!!!
+    
+    err.name;       //'AuthError'
+    err.message;    //'Bad Auth Token'
+    err.status;     //401
+    err.stack;      //Full stacktrace
+    err.toString(); // 'AuthError : Bad Auth Token'
 }
 
 //Overide it!
@@ -65,17 +68,18 @@ try{
     throw Err.auth({
         status : 418,
         name : 'TeapotError',
-        message : 'Entity body may be short and/or stout',
+        message : 'Entity body must be short and/or stout',
         fields : {
             type : 'Earl Grey',
             temp : 'hot'
         }
     });
 }catch(err){
-    err instanceof Err.auth;     //true!
-    err.fields.type;             // 'Earl Grey'
-​    err.status;                  //418
-    console.log(err.toString()); // 'TeapotError : Entity body may be short and/or stout'
+    err instanceof Err.auth;  //true!
+    
+    err.fields.type;          // 'Earl Grey'
+    err.status;               //418
+    err.toString();           // 'TeapotError : Entity body may be short and/or stout'
 }
 ```
 
