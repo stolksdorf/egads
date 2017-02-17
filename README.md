@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/egads.svg)](https://badge.fury.io/js/egads)
+
 # egads
 Yet another extensible error library for node.js
 
