@@ -36,6 +36,7 @@ Err.auth.badToken = Err.auth.extend('Bad Auth Token');
 //Use object parameters
 Err.badInput = Err.extend({
     name : 'BadInputError',
+    message : 'What am I suppose to do with this?',
     status : 400,
     fields : {
         shameOnYou : true
