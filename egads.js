@@ -25,7 +25,9 @@ BaseError.extend = function(message, status, name, fields){
 		this.message = args.message || this.message;
 		this.fields  = args.fields  || this.fields;
 
-		Error.captureStackTrace(this, this.constructor);
+        if (Error.captureStackTrace) {
+		    Error.captureStackTrace(this, this.constructor);
+        }
 	};
 	subError.extend = this.extend;
 
