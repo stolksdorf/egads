@@ -1,10 +1,11 @@
 {
   "name": "egads",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Yet another extensible error library for node.js",
   "main": "egads.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "pico-check",
+    "test:dev": "pico-check -w -b"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,12 @@
     "extendable"
   ],
   "author": "stolksdorf",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/stolksdorf/egads/issues"
   },
-  "homepage": "https://github.com/stolksdorf/egads#readme"
+  "homepage": "https://github.com/stolksdorf/egads#readme",
+  "devDependencies": {
+    "pico-check": "^1.2.2"
+  }
 }
