@@ -25,7 +25,7 @@ Install `npm install egads`
 Define your errors.
 ```javascript
 //define your base error
-var Err = require('egads').extend('Something done goofd', 500, 'GenericError');
+const Err = require('egads').extend('Something done goofd', 500, 'GenericError');
 
 //Extend it for cover you basic types
 Err.auth = Err.extend('Unauthorized', 401, 'AuthError');
@@ -55,7 +55,7 @@ try{
     err instanceof Err;               //true!
     err instanceof Err.auth;          //true!!
     err instanceof Err.auth.badToken; //true!!!
-    
+
     err.name;       //'AuthError'
     err.message;    //'Bad Auth Token'
     err.status;     //401
@@ -77,7 +77,7 @@ try{
     });
 }catch(err){
     err instanceof Err.auth;  //true!
-    
+
     err.fields.type;          // 'Earl Grey'
     err.status;               //418
     err.toString();           // 'TeapotError : Entity body may be short and/or stout'
